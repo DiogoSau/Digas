@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="color: rgb(0, 0, 0); font-family:Georgia, 'Times New Roman', Times, serif;">Mudar fundo:</h3>
+    <button onclick="cor(1)" id="azul">Azul</button>
+    <button onclick="cor(2)" id="vermelho">Vermelho</button>
+    <button onclick="cor(3)" id="branco">Branco</button>
+    <button onclick="cor(4)" id="amarelo">Amarelo</button>
+        <script>
+            document.getElementById("azul").style.backgroundColor = "rgb(20, 148, 226)"
+            document.getElementById("vermelho").style.backgroundColor = "rgb(197, 61, 61)"
+            document.getElementById("amarelo").style.backgroundColor = "rgb(202, 216, 97)"
+            function cor(i){
+                if (i == 1){
+                    document.body.style.backgroundColor = "rgb(20, 148, 226)";
+                } else if (i == 2){
+                    document.body.style.backgroundColor = "rgb(197, 61, 61)";
+                } else if (i == 3){
+                    document.body.style.backgroundColor = "white";
+                } else{
+                    document.body.style.backgroundColor = "rgb(202, 216, 97)";
+                }
+            }
+        </script>
+</body>
+</html>

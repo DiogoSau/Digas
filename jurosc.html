@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de juros</title>
+</head>
+<body>
+     <link rel="stylesheet" href="css/juros.css">
+    <main id="container">
+        <div id="calculator">
+            <h2>
+                Calculadora de Juros Compostos
+            </h2>
+
+            <div id="input_box">
+                <div class="input-field">
+                    <label for="value">Valor Inicial (capital):</label>
+                    <input type="number" id="value">
+                </div>
+
+                <div class="input-field">
+                    <label for="fee">Taxa de Juros a.m:</label>
+                    <input type="number" id="fee">
+                </div>
+
+                <div class="input-field">
+                    <label for="time">Tempo de Rendimento a.m:</label>
+                    <input type="number" id="time">
+                </div>
+            </div>
+
+            <div id="result">
+                <h4>Resultado:</h4>
+                <span id="total">
+                    R$ 0,00
+                </span>
+            </div>
+
+            <button id="calculate">
+                Calcular
+            </button>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('calculate').addEventListener('click', function(){
+    const value = document.getElementById('value').value;
+    const fee = (document.getElementById('fee').value) / 100;
+    const time = document.getElementById('time').value;
+
+    const total = value * (1 + fee)**time;
+
+    document.getElementById('total').innerHTML = ("R$ " + total.toFixed(2).replace('.', ','));
+});
+    </script>
+</body>
+</html>

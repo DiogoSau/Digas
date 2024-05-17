@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form>
+         <p> <b>Preencha seus dados</b>  </p><br>
+         <div>
+                nome: <br><input type="text" id="nome" placeholder="Digite seu nome" onkeypress="press()"> <br><br>
+                Rg: <br><input type="text" id="rg" placeholder="Digite seu Rg" onkeypress="press()" > <br><br>
+                CPF: <br> <input type="text" id="cpf" placeholder="Digite seu CPF"  onkeypress="press()"> <br><br>
+                Profissâo: <br> <input type="text" id="profissâo" placeholder="Digite sua Profissâo"  onkeypress="press()"> <br><br>
+                Endereço: <br> <input type="text" id="endereço" placeholder="Digite seu Endereço" onkeypress="press()"> <br><br>
+           
+        </div>
+    </form>
+    <span id="texto"></span>    
+    <script>
+         function press() {
+
+            var nome = document.getElementById("nome");
+            var n = nome.value;
+
+            var Rg = document.getElementById("Rg");
+            var r = rg.value;
+
+            var CPF = document.getElementById("CPF");
+            var c = cpf.value;
+
+            var Profissão = document.getElementById("Profissão");
+            var p = profissão.value;
+
+            var Endereço = document.getElementById("Endereço");
+            var e = endereço.value;
+
+            var contrato = document.getElementById("texto");
+            contrato.innerText = "EU, " + n + "com o Rg, " + r + "e CPF, " + c + "tendo a profissão de" + p + "e com o endereço," + e + "estou  ciente dos termos de contrato de estagio que tenho que comprir todos os dias";
+         }
+    </script>
+</body>
+</html>
